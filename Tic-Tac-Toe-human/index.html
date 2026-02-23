@@ -4,6 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="tictac-container">
+      <div class="tictac-menu">
+        <!-- Player 1 -->
+        <div class="player">
+          <label for="player1Name">Player 1 (X):</label>
+          <input type="text" id="player1Name" placeholder="Enter name" />
+        </div>
+        <!-- Player 2 -->
+        <div class="player">
+          <label for="player2Name">Player 2 (O):</label>
+          <input type="text" id="player2Name" placeholder="Enter name" />
+        </div>
+        <button class="" id="start-button">Start</button>
+      </div>
+      <div class="winner-message" style="display: none">Player 2 wins</div>
+      <div class="tictac-board-container" style="display: none">
+        <div class="game-message" style="display: none"></div>
+        <div class="tictac-board">
+          <div class="cell" data-index="1"></div>
+          <div class="cell" data-index="2"></div>
+          <div class="cell" data-index="3"></div>
+          <div class="cell" data-index="4"></div>
+          <div class="cell" data-index="5"></div>
+          <div class="cell" data-index="6"></div>
+          <div class="cell" data-index="7"></div>
+          <div class="cell" data-index="8"></div>
+          <div class="cell" data-index="9"></div>
+        </div>
+        <button id="restart-button" style="display: none">Restart</button>
+      </div>
+    </div>
+    <script type="module" src="TicTacToe.js"></script>
+    <script type="module" src="index.js"></script>
+  </body>
 </html>

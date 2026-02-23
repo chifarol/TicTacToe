@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+body {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  justify-content: center;
+  background-color: #f4f4f4;
+}
+button {
+  padding: 6px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  width: max-content;
+}
+input {
+  padding: 8px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+input:focus {
+  outline: none;
+  /* border-color: none; */
+  /* border-color: rgba(0, 0, 0, 0.3); */
+}
+.tictac-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: max-content;
+  justify-content: center;
+  background-color: #f4f4f4;
+  padding: 32px;
+  gap: 20px;
+  /* align-items: center; */
+}
+.tictac-menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+  background-color: #ffffff;
+  height: max-content;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  /* width: 150px; */
+}
+.tictac-menu button {
+  background-color: darkslateblue;
+  color: #ffffff;
+}
+.tictac-board .cell:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+.tictac-board .cell {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+}
+.tictac-board .cell.taken {
+  cursor: unset;
+  pointer-events: none;
+}
+.tictac-board .cell.taken:hover {
+  background-color: inherit;
+}
+.tictac-board-container {
+  background-color: #ffffff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 8px;
+}
+.tictac-board {
+  /* margin-top: 50px; */
+  width: 500px;
+  height: 500px;
+  min-height: 500px;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.winner-message {
+  padding: 20px;
+  background-color: #4eae4e10;
+  border: 1px solid #4eae4e;
+  color: #4eae4e;
+  text-align: center;
+  border-radius: 8px;
+}
